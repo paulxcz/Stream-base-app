@@ -1,0 +1,53 @@
+@use '../vars/helpers.scss';
+
+.register-advice{
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    background-color: helpers.$primary;
+    padding: 7px 15px;
+    width: 100%;
+    .advice-text{
+
+        display: grid;
+        margin-bottom: 10px;
+        grid-template-columns: 14px auto;
+        column-gap: 5px;
+        line-height: 15px;
+        i{
+            margin-top: 2px;
+            text-align: center;
+        }
+        p{
+            font-size: .8em;
+        }
+    }
+    button{
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        padding: 9px 120px;
+        font-weight: bolder;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
+@media screen and(min-width:1024px) {
+    .register-advice{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.2em;
+        padding: 7px 25px;
+        .advice-text{
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+        button{
+           width: auto;
+           padding: 15px 24px;
+        }
+    }
+}

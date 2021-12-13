@@ -1,0 +1,328 @@
+@use "../vars/helpers.scss";
+
+.streamView-container {
+  display: grid;
+  grid-template-columns: auto 288px;
+  grid-template-columns: auto max-content;
+  grid-template-rows: 1fr;
+  margin: 0;
+  padding: 0;
+
+  .stream-video-section {
+    display: grid;
+    grid-template-rows: auto auto auto;
+
+    .video-streamer-container {
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .icons {
+        position: absolute;
+        width: 75px;
+        bottom: 21px;
+        left: 21px;
+        z-index: 4;
+        display: flex;
+        justify-content: space-between;
+        svg {
+          font-size: 27px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: rgba($color: #000000, $alpha: 0.8);
+          }
+        }
+      }
+      .icon-arrow {
+        position: absolute;
+        color: helpers.$white-2;
+        cursor: pointer;
+        top: 10px;
+        right: 25px;
+        font-size: 1.5em;
+        border-left: solid 3px helpers.$white-2;
+        transform: scaleX(1.2);
+        font-weight: bolder;
+        background-color: helpers.$black-2;
+        border-radius: 5px;
+        width: 30px;
+        height: 30px;
+
+        &:hover {
+          background-color: rgba($color: helpers.$black-2, $alpha: 0.7);
+        }
+      }
+    }
+
+    .viewers-section {
+      // background-color: $blue;
+      display: grid;
+      grid-template-columns: 70% 30%;
+      justify-items: end;
+      padding: 21px 20px;
+      .first-section {
+        display: grid;
+        grid-template-columns: 63px auto;
+        width: 100%;
+        // background-color: $red;
+        .img-with-text {
+          // background-color: purple;
+          position: relative;
+          width: 63px;
+          height: 63px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+          }
+
+          h4 {
+            position: absolute;
+            border-radius: 5px;
+            background-color: helpers.$red;
+            bottom: -8px;
+            right: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 0.8em;
+          }
+        }
+
+        .name-and-category {
+          margin-left: 8px;
+          // background-color: skyblue;
+          p {
+            color: helpers.$secondary;
+            font-weight: 500;
+          }
+          h4 {
+            // overflow: hidden;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            // white-space: nowrap;
+          }
+        }
+      }
+
+      .second-section {
+        // width: 70%;
+        // background-color: $orange;
+        button {
+          padding: 14px 24px;
+          border-radius: 8px;
+          color: helpers.$white-1;
+          // display: flex;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          font-weight: bold;
+          svg {
+            vertical-align: middle;
+          }
+          span {
+            vertical-align: middle;
+            margin-left: 4px;
+          }
+        }
+
+        .follow-button {
+          background-color: helpers.$primary;
+        }
+        .suscribe-button {
+          background-color: helpers.$grey-1;
+          margin-left: 9px;
+        }
+
+        .viewers-time-section {
+          text-align: right;
+          margin-top: 20px;
+          display: flex;
+          justify-content: flex-end;
+          .viewers {
+            color: helpers.$red;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            svg {
+              margin-right: 7px;
+            }
+          }
+
+          .timer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    .about-streamer {
+      padding: 0 20px;
+
+      .information {
+        padding: 32px 25px 10px 25px;
+        background-color: helpers.$black-3;
+
+        h1 {
+          font-size: 1.9em;
+        }
+      }
+    }
+  }
+
+  .stream-chat {
+    background-color: helpers.$black-2;
+    padding: 9px 12px;
+    width: 288px;
+    // grid-row: 1/3;
+    .text-header {
+      display: flex;
+      align-items: center;
+
+      svg {
+        font-size: 1.2em;
+        border-left: solid 2px helpers.$white-1;
+        transform: scaleX(1.2);
+        cursor: pointer;
+
+        &:hover{
+          border-radius: 5px;
+          background-color: rgba($color: helpers.$white-1, $alpha: .6);
+        }
+      }
+      h1 {
+        padding: 0;
+        padding-left: 9px;
+        margin: 0;
+        font-weight: 400;
+        font-size: 0.9em;
+      }
+    }
+
+    .user-messages {
+      padding-top: 25px;
+
+      .message-box {
+        margin-bottom: 14px;
+
+        .user {
+          &.red {
+            color: red;
+          }
+          &.blue {
+            color: blue;
+          }
+          &.green {
+            color: green;
+          }
+          &.orange {
+            color: orange;
+          }
+          &.purple {
+            color: purple;
+          }
+          &.pink {
+            color: hotpink;
+          }
+          &.golden {
+            color: goldenrod;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 1024px) and (max-width: 1431px) {
+  .viewers-section {
+    .second-section {
+      justify-items: end;
+      text-align: right;
+    }
+  }
+}
+
+@media screen and(max-width: 1023px) {
+  .streamView-container {
+    display: flex;
+    flex-direction: column;
+
+    .stream-video-section {
+      display: flex;
+      flex-direction: column;
+
+      .viewers-section {
+        display: flex;
+        justify-content: space-between;
+        height: 210px;
+
+        .first-section {
+          display: flex;
+          overflow: hidden;
+          width: 60%;
+          // background-color: red;
+
+          .img-with-text {
+            width: 63px;
+            height: 100%;
+
+            img {
+              width: 63px;
+              height: 63px;
+            }
+            h4 {
+              top: 50px;
+              bottom: auto;
+            }
+          }
+          .name-and-category {
+            width: 100%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+        }
+
+        .second-section {
+          text-align: right;
+          width: 40%;
+
+          .buttons {
+            .follow-button {
+              padding: 7px 12px;
+            }
+            .suscribe-button {
+              padding: 7px 12px;
+              margin-left: 0;
+            }
+          }
+          .viewers-time-section {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+
+      .about-streamer {
+        padding: 0;
+      }
+    }
+
+    .stream-chat {
+      width: 100%;
+      background-color: helpers.$black-3;
+
+      .text-header {
+        display: none;
+      }
+    }
+  }
+}

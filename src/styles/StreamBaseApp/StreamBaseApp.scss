@@ -1,0 +1,19 @@
+@use '../vars/helpers.scss';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: helpers.$body1-regular;
+    color: helpers.$white-1;
+    background-color: helpers.$black-1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+
+}
+  
+  

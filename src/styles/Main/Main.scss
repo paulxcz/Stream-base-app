@@ -1,0 +1,192 @@
+@use '../vars/helpers.scss';
+
+main {
+  position: relative;
+  padding: 0 15px;
+  h1 {
+    font-size: 1.2em;
+    color: helpers.$white-1;
+    margin-bottom: 10px;
+
+    a {
+      color: helpers.$secondary;
+    }
+  }
+  hr {
+    margin: 0px -15px 24px -15px;
+    align-self: stretch;
+    height: 1px;
+    background-color: helpers.$grey-1;
+    border: none;
+  }
+  .streams-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .stream-container {
+      margin-bottom: 20px;
+      width: 100%;
+      // max-width: 336px;
+      max-width: 437px;
+
+      .stream {
+        cursor: pointer;
+        width: 100%;
+        min-height: 167px;
+        min-width: 290px;
+        position: relative;
+        margin-bottom: 6px;
+        img {
+          width: 100%;
+          height: 100%;
+          min-height: 167px;
+        }
+        span {
+          position: absolute;
+          z-index: 2;
+        }
+        .tag-on {
+          font-size: 0.9em;
+          text-align: center;
+          border-radius: 5px;
+          background-color: helpers.$tagLiveBackground;
+          left: 15px;
+          top: 15px;
+          padding: 1px 5px;
+        }
+
+        .tag-spectators {
+          font-size: 0.9em;
+          text-align: center;
+          border-radius: 5px;
+          background-color: rgba($color: helpers.$spectators-background, $alpha: 0.8);
+          left: 15px;
+          bottom: 15px;
+          padding: 1px 5px;
+        }
+      }
+
+      .stream-info {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        column-gap: 5px;
+        row-gap: 0px;
+        color: helpers.$white-1;
+
+        .streamer-image {
+          background-color: blue;
+          grid-row: 1/3;
+          grid-column: 1/2;
+          height: 29px;
+          width: 29px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin-top: 10px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .stream-title {
+          grid-row: 1/2;
+          display: block;
+          height: 25px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          margin-bottom: 0;
+          font-size: 1.1em;
+        }
+
+        .streamer-name {
+          margin-top: -5px;
+          font-size: 0.9em;
+        }
+
+        .streamer-languajes {
+          grid-column: 2/3;
+          font-size: 0.9em;
+
+          span {
+            background-color: #464649;
+            padding: 2px 4px;
+            border-radius: 9px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 1024px) {
+  main {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    padding: 0;
+    .navbar-streamers {
+      grid-row: 1/7;
+    }
+    .h1-first {
+      grid-row: 2/3;
+      margin-top: 25px;
+      margin-bottom: 11px;
+      padding-left: 25px;
+    }
+    .streams-container.first-container {
+      padding: 0 25px;
+      display: grid;
+      grid-template-columns: 336px 336px 336px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      grid-row: 3/4;
+      grid-column: 2/3;
+      column-gap: 23px;
+      row-gap: 3px;
+      justify-content: space-between;
+
+      .stream {
+        min-width: 0;
+      }
+    }
+
+    hr {
+      grid-row: 4/5;
+      margin: 20px 0px;
+    }
+
+    .h1-second {
+      grid-row: 5/6;
+      margin-top: 24px;
+      margin-bottom: 15px;
+      padding-left: 25px;
+    }
+
+    .streams-container.second-container {
+      padding: 0 25px;
+      display: grid;
+      grid-template-columns: 336px 336px 336px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      column-gap: 23px;
+      row-gap: 3px;
+      justify-content: space-between;
+
+      .stream {
+        min-width: 0;
+      }
+    }
+  }
+
+  //If user click on specific streamer
+  .stream-selected {
+    // grid-template-columns: 277px auto;
+    grid-template-columns: max-content auto;
+    grid-template-rows: auto;
+
+  }
+}
