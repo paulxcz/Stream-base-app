@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "./static/css/main.ce5cf183.chunk.css",
+    "main.js": "./static/js/main.36e256ac.chunk.js",
+    "main.js.map": "./static/js/main.36e256ac.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.f644f362.js",
+    "runtime-main.js.map": "./static/js/runtime-main.f644f362.js.map",
+    "static/js/2.fe0445fc.chunk.js": "./static/js/2.fe0445fc.chunk.js",
+    "static/js/2.fe0445fc.chunk.js.map": "./static/js/2.fe0445fc.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.ce5cf183.chunk.css.map": "./static/css/main.ce5cf183.chunk.css.map",
+    "static/js/2.fe0445fc.chunk.js.LICENSE.txt": "./static/js/2.fe0445fc.chunk.js.LICENSE.txt",
+    "static/media/Pablo_en_Japon_StreamView.png": "./static/media/Pablo_en_Japon_StreamView.0efc119c.png",
+    "static/media/elXocasStreamView.PNG": "./static/media/elXocasStreamView.2811c009.PNG",
+    "static/media/live_user_elxokas-320x180.jpg": "./static/media/live_user_elxokas-320x180.09260879.jpg",
+    "static/media/live_user_pablo_en_japon-320x180.jpg": "./static/media/live_user_pablo_en_japon-320x180.025322a3.jpg",
+    "static/media/live_user_pzzzang3.jpg": "./static/media/live_user_pzzzang3.8f1c2501.jpg",
+    "static/media/live_user_send0o.jpg": "./static/media/live_user_send0o.f9b798a5.jpg",
+    "static/media/plablo_en_japon_Logo.png": "./static/media/plablo_en_japon_Logo.671130eb.png",
+    "static/media/pzzzang3_StreamView.png": "./static/media/pzzzang3_StreamView.231c0aaa.png",
+    "static/media/send0o_StreamView.png": "./static/media/send0o_StreamView.62c9e240.png",
+    "static/media/Banner.scss": "./static/media/twitch_banner.b8839d40.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f644f362.js",
+    "static/js/2.fe0445fc.chunk.js",
+    "static/css/main.ce5cf183.chunk.css",
+    "static/js/main.36e256ac.chunk.js"
+  ]
+}
